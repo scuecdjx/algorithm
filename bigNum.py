@@ -1,8 +1,10 @@
 #-*- coding:utf-8 -*-
-str1 = input()
+'''
+样例输入
+123456489798421654164-351515645132
+'''
 
-
-def brk(s1):
+def brk(s1):#拆分字符串
     s = ''
     ss = ''
     s2 = list(s1)
@@ -18,15 +20,15 @@ def brk(s1):
     return s, ss
 
 
-def minus(m, n):
+def minus(m, n):#两个数相减后转化为str
     t = m - n
     return str(m - n)
 
 
-def solve(a, b):
+def solve(a, b):#两个字符串相减，结果返回字符串
     i = 1
     j = 1
-    result = ''
+    result = '' #存放结果
     aa = list(map(int, list(a)))
     bb = list(map(int, list(b)))
     while i <= len(bb):
@@ -46,6 +48,6 @@ def solve(a, b):
         j += 1
     return result
 
-
+str1 = input()
 big, small = brk(str1)
 print(solve(big, small))
